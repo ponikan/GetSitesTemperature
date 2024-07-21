@@ -1,12 +1,9 @@
 package TestFile;
 
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 
-
-public class GetAllWorkingSitesMap {
+public class GetAllWorkingSitesTemperMap {
 
     public static Map<String,Integer> getSiteTemperAllMap(){
 
@@ -18,6 +15,7 @@ public class GetAllWorkingSitesMap {
            for (int i = 0; i < siteNameList.size(); i++) {
                siteTemperAllMap.put(siteNameList.get(i), degrees.get(i));
            }
+
         return siteTemperAllMap;
 
        } else throw new MyException("Количество сайтов не равно количеству значений температуры");

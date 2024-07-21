@@ -11,7 +11,7 @@ public class ReadAllStringsFromMMLFile {
 
     public static List<String> getAllStrings(){
        List<String> allStrings = new ArrayList<>(); // список для всех строк из исходного файла
-       try(BufferedReader bufferedReader = new BufferedReader(new FileReader(Constants.FILENAME_IN))){
+       try(BufferedReader bufferedReader = new BufferedReader(new FileReader(FindPath.findPath(Constants.FILENAME_IN)))){
            while (bufferedReader.ready()){
                allStrings.add(bufferedReader.readLine());
            }
